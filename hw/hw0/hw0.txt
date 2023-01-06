@@ -1,0 +1,53 @@
+Problem 1
+
+Unsigned
+240	0b11110000	0xF0
+15	0b00001111	0x0F
+161	0b10100001	0xA1
+250	0b11111010	0xFA
+255	0b11111111	0xFF
+204	0b11001100	0xCC
+-35	n/a		n/a
+128	0b10000000	0x80
+105	0b01101001	0x69
+
+Two's Complement
+-16	0b11110000	0bF0
+15	0b00001111	0x0F
+-95	0b10100001	0xA1
+250	n/a		n/a
+-1	0b11111111	0xFF
+-52	0b11001100	0xCC
+-35	0b11011101	0xDD
+128	n/a		n/a
+105	0b01101001	0x69
+
+Problem 2
+1. You would like to represent the temperature in degrees Celsius:
+ TWO'S COMPLEMENT, tempature is signed
+ 
+2. You would like to maximize the range (distance between most negative represented number, and most positive represented number):
+ UNSIGNED, most negative number and most positive number under 2's complement are neighbours.
+
+3. You would like to represent the number of boxes a factory has shipped:
+ UNSIGNED, no negative number of boxes, and unsigned can represented more positive number.
+
+Problem 3
+a. For a system of n-digit unsigned base 4 numbers (n > 1), how many numbers can be represented?
+ 4**n
+b. For an n-digit 2's complement binary number (n > 1), what is the number of negative integers?
+ 2**(n - 1)
+c. For an n-digit 2's complement number (n > 1), how many zeros are there?
+ 1
+d. For an n-digit 2's complement number (n > 1), what is the difference between the most positive number and the most negative number?
+ plus 1 (~the most postitve number)
+
+Problem 4
+The following addition and subtraction operations are to be carried out with 8-bit 2's complement numbers. For each operation, calculate the result and label as OVERFLOW or CORRECT
+
+Example: 1 + 2 = 0b0000 0001 + 0b0000 0010 = 0b0000 0011 = 3, CORRECT
+
+64 + 64 = 0b0100 0000 + 0b0100 0000 = 0b1000 0000 = -128, OVERFLOW
+-127 + 30 = 0b1000 0001 + 0b0001 1110 = 0b1001 1111 = -97, CORRECT 
+-127 - 1 = 0b1000 0001 - 0b0000 0001 = 0b1000 0000 = -128, CORRECT
+38 - 40 = 0b0010 0110 - 0b0010 1000 = 0b1111 1110 = -2, CORRECT
