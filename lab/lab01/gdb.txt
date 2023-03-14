@@ -1,9 +1,9 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
+1. run <args>
+2. b main
+3. next
+4. step
+5. next/step
+6. print (int) printf ("Print nine: %d.", 4 + 5)
+7. target stop-hook add --one-liner "frame variable argc argv"
+8. target variable
+9. exit
