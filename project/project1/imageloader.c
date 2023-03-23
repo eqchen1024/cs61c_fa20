@@ -63,7 +63,7 @@ void writeData(Image *image)
 	//YOUR CODE HERE
     printf("P3\n");
     printf("%d %d\n",image->cols,image->rows);
-    printf("255 \n");
+    printf("255\n");
     Color **cur = image->image;
     for(int i = 0;i < (image->cols * image->rows);i++){
         printf("%3d %3d %3d",(**(cur)).R,(**(cur)).G,(**(cur)).B);
