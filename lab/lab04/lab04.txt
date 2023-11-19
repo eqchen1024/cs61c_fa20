@@ -1,0 +1,13 @@
+Record your answers to the following questions in a text file. Some of the questions will require you to run the RISC-V code using Venus’ simulator tab.
+
+Find the five mistakes inside the map function in megalistmanips.s. Read all of the commented lines under the map function in megalistmanips.s (before it returns with jr ra), and make sure that the lines do what the comments say. Some hints:
+Why do we need to save stuff on the stack before we call jal?
+What’s the difference between add t0, s0, x0 and lw t0, 0(s0)?
+Pay attention to the types of attributes in a struct node.
+Note: you need only focus on the map, mapLoop, and done functions but it’s worth understanding the full program.
+
+1. add t1, s0, x0 would copy the address of the node to t1 instead if load the address of the array of current node into t1
+2. add t1, t1, t0 in order to offset the array address by the count we need to multiply 4 to word
+3. la a1, 0(s1) it put the function instead of the address back into a1 to prepare for the recursion
+4. la a0, 8(s0) the second argument of la should be sym, if we want to load the address of the next node then should use la
+5. save and load t1 t2 t3 on stack, because of calling the func s1, the value of t1 t2 t3 may have been changed.

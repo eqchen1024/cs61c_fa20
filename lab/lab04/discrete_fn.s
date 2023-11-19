@@ -77,6 +77,16 @@ main:
 # Think: why might having a1 be useful?
 f:
     # YOUR CODE GOES HERE!
+    addi sp, sp, -4
+    sw t0, 0(sp)
+
+    addi t0, a0, 3
+    slli t0, t0, 2
+    add a1, a1, t0
+    lw a0, 0(a1)
+
+    lw t0, 0(sp)
+    addi sp, sp, 4
 
     jr ra               # Always remember to jr ra after your function!
 
